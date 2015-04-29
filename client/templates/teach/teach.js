@@ -25,7 +25,8 @@ Template.teach.events({
             title: template.find('#courseTitle').value, // string
 
             // Cover Image ID comes from reactive var set in #courseCoverImage change event
-            coverImageId: imageIdVar.get(),
+            //coverImageId: imageIdVar.get(),
+            coverImageId: '',
 
             author: template.find('#authorName').value, // string
             keywords: template.find('#courseKeywords').value.split(','), // split keywords to array
