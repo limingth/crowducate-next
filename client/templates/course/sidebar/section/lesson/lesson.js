@@ -25,5 +25,13 @@ Template.sectionLesson.events({
 
         // update the lesson in database
         Lessons.update(this._id, {$set: {'name': newName}});
+    },
+    'click .lesson-mark-done': function(event, template) {
+      console.log(this);
+      var CompletedLessonId = CompletedLessons.insert({
+        lessonId: this._id,
+        userId: Meteor.userId(),
+        createdAt: new Date()
+      });
     }
 });
