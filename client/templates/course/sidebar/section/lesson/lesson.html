@@ -1,8 +1,10 @@
 <template name="sectionLesson">
-    <li>
-        <a href="#" class="sidebar-lesson-link">
-            <span class="sidebar-lesson-title">{{ this.name }}</span>
-        </a>
-        <a href="#" class="lesson-mark-done">done {{isCompleted}}</a>
-    </li>
+  <li>
+    <a href="#" class="sidebar-lesson-link {{isCompleted}}">
+      <span class="sidebar-lesson-title">{{ this.name }}</span>
+      <span class="lesson-mark-done">
+        <i class="fa fa-check-square"></i>
+      </span>
+    </a>
+  </li>
 </template>
