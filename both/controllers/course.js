@@ -8,7 +8,8 @@ CourseController = AppController.extend({
              // Wait for the course to be available
             this.subscribe("singleCourse", courseID),
             // subscribe only to lessons in this course
-            this.subscribe("courseLessons", courseID)
+            this.subscribe("courseLessons", courseID),
+            this.subscribe("completedLessons", Meteor.userId())
         ];
     },
     data: function () {

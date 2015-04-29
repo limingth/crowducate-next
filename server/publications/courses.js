@@ -13,3 +13,7 @@ Meteor.publish('taggedCourses', function (tag) {
 Meteor.publish('singleCourse', function (courseID) {
     return Courses.find({"_id": courseID});
 });
+
+Meteor.publish('completedLessons', function (userId) {
+    return CompletedLessons.find({"userId": userId});
+});
