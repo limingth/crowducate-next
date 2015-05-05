@@ -1,67 +1,67 @@
 <template name="_header">
 
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
 
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
-                    <span class="sr-only">
-                        {{ mf '_header-navbarToggle' 'Toggle navigation' }}
-                    </span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{pathFor 'home'}}">毛豆网微课堂</a>
-            </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+          <span class="sr-only">
+            {{ mf '_header-navbarToggle' 'Toggle navigation' }}
+          </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{pathFor 'home'}}">毛豆网微课堂</a>
+      </div>
 
-            <div class="collapse navbar-collapse" id="main-nav">
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}">
-                        <i class="fa fa-home"></i>&nbsp;
-                        {{ mf '_header-homeTab-linkText' '首页' }}
-                        </a>
-                    </li>
-                    <li class="{{ isActivePath regex='learn' }}">
-                        <a href="{{ pathFor 'learn' }}">
-                            <i class="fa fa-book"></i>&nbsp;
-                            {{ mf '_header-learnTab-linkText' '开始学习' }}
-                        </a>
-                    </li>
-                    <li class="{{ isActivePath regex='teach' }}">
-                        <a href="{{ pathFor 'teach' }}">
-                            <i class="fa fa-university"></i>&nbsp;
-                            {{ mf '_header-teachTab-linkText' '发布一个微课' }}
-                        </a>
-                    </li>
-                </ul>
-                <!-- {{> languageSelection}} -->
-                {{#if currentUser}}
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-user"></i> {{ currentUser.profile.name }} <i class="fa fa-caret-down"></i>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="#" data-action="logout"><i class="fa fa-lock"></i>&nbsp;
-                                    {{ mf '_header-dropdownMenu-signOutText' '退出'}}
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                {{else}}
-                <div class="navbar-right">
-                    <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">
-                        {{ mf '_header-navbar-signInText' '登录' }}
-                    </a>
-                    <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">
-                        {{ mf '_header-navbar-registerText' '注册' }}
-                    </a>
-                </div>
-                {{/if}}
-            </div>
-        </div>
-    </nav>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}">
+            <i class="fa fa-home"></i>&nbsp;
+            {{ mf '_header-homeTab-linkText' '首页' }}
+          </a>
+        </li>
+        <li class="{{ isActivePath regex='learn' }}">
+          <a href="{{ pathFor 'learn' }}">
+            <i class="fa fa-book"></i>&nbsp;
+            {{ mf '_header-learnTab-linkText' '开始学习' }}
+          </a>
+        </li>
+        <li class="{{ isActivePath regex='teach' }}">
+          <a href="{{ pathFor 'teach' }}">
+            <i class="fa fa-university"></i>&nbsp;
+            {{ mf '_header-teachTab-linkText' '发布一个微课' }}
+          </a>
+        </li>
+      </ul>
+      <!-- {{> languageSelection}} -->
+      {{#if currentUser}}
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-user"></i> {{ currentUser.profile.name }} <i class="fa fa-caret-down"></i>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="#" data-action="logout"><i class="fa fa-lock"></i>&nbsp;
+                {{ mf '_header-dropdownMenu-signOutText' '退出'}}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      {{else}}
+      <div class="navbar-right">
+        <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">
+          {{ mf '_header-navbar-signInText' '登录' }}
+        </a>
+        <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">
+          {{ mf '_header-navbar-registerText' '注册' }}
+        </a>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</nav>
 </template>
