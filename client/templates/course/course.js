@@ -4,3 +4,9 @@ Template.course.rendered = function () {
         '<button type="submit" class="btn btn-success editable-submit btn-mini"><i class="fa fa-check"></i></button>' +
         '<button type="button" class="btn btn-danger editable-cancel"><i class="fa fa-times"></i></button>';
 };
+
+Template.course.helpers({
+    admin: function () {
+        return Meteor.userId() == "feKnQQv5w4b6hkisX";
+    }
+});

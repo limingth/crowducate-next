@@ -2,8 +2,9 @@
         <div class="row">
           {{>courseTitle}}
         </div>
-
-    {{!-- {{>courseToolbar}}  --}}
+    {{#if admin}}
+      {{>courseToolbar}} 
+    {{/if}}
     <div class="row">
         <div class="panel">
             <div class="panel-body">
