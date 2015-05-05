@@ -11,7 +11,7 @@ Template.lesson.helpers({
     'editingLessonText': function (template) {
         // return true if editing the lesson text
         // value is set on click event
-        return editingLessonText.get();
+        return editingLessonText.get() && Meteor.userId() == "feKnQQv5w4b6hkisX";
     }
 });
 
@@ -23,7 +23,7 @@ Template.lesson.events({
         // in edit mode,
         // add rich text editor
         // to lesson text
-        if (editingLessonText.get()) {
+        if (editingLessonText.get() && Meteor.userId() == "feKnQQv5w4b6hkisX") {
             $('#rich-text-editor').summernote({
                 'height': 300,
                 'focus': true,
