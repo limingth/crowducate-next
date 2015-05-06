@@ -105,6 +105,7 @@ srp@1.0.3
 summernote:standalone@0.6.5
 templating@1.1.1
 tracker@1.0.7
+twbs:bootstrap@3.3.4
 ui@1.0.6
 underscore@1.0.3
 underscorestring:underscore.string@3.0.3

@@ -31,3 +31,4 @@ cfs:standard-packages
 gadicohen:messageformat
 browser-policy
 meteorhacks:fast-render
+twbs:bootstrap
