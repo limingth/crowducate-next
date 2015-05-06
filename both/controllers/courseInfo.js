@@ -6,6 +6,7 @@ CourseInfoController = AppController.extend({
             this.subscribe('courseCoverImage', this.params._id)
         ];
     },
+    fastRender: true,
     data: function () {
         // Return the course
         return Courses.findOne();
