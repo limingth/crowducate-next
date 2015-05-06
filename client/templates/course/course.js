@@ -6,7 +6,12 @@ Template.course.rendered = function () {
 };
 
 Template.course.helpers({
+  /*
     admin: function () {
-        return Meteor.userId() == "feKnQQv5w4b6hkisX";
+        return Meteor.userId() == "feKnQQv5w4b6hkisX" || Meteor.userId() == "5Fp9XzMhyDEjfnipt" || Meteor.userId() == "6ryZES3ZPJeeYs8YY" || Meteor.userId() == "xgoJBP5wo2drCtKBb";
     }
+  */
+  admin: function (argument) {
+      return Meteor.userId() == "znNB43xrYAWRXKtWe" || Meteor.userId() == "feKnQQv5w4b6hkisX" || Meteor.userId() == "5Fp9XzMhyDEjfnipt" || Meteor.userId() == "6ryZES3ZPJeeYs8YY" || Meteor.userId() == "xgoJBP5wo2drCtKBb";
+  }
 });

@@ -6,3 +6,8 @@ defaultEditableOptions = {
     display: false,
     showbuttons: false
 };
+
+
+Template.registerHelper('canEdit', function() {
+  return Meteor.userId() == "znNB43xrYAWRXKtWe" || Meteor.userId() == "feKnQQv5w4b6hkisX" || Meteor.userId() == "5Fp9XzMhyDEjfnipt" || Meteor.userId() == "6ryZES3ZPJeeYs8YY" || Meteor.userId() == "xgoJBP5wo2drCtKBb";
+});
