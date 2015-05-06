@@ -1,12 +1,17 @@
 Router.route('/', {
-    name: 'home'
+    name: 'home',
+    fastRender: true
 });
 
 Router.route('/dashboard');
 
-Router.route('/teach');
+Router.route('/teach', {
+  fastRender: true
+});
 
-Router.route('/learn');
+Router.route('/learn', {
+  fastRender: true
+});
 
 Router.route('tag/:tag',  {
     name: 'taggedCourses'
