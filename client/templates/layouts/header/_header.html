@@ -32,8 +32,14 @@
         </li>
         <li class="{{ isActivePath regex='teach' }}">
           <a href="{{ pathFor 'teach' }}">
-            <i class="fa fa-university"></i>&nbsp;
+            <i class="fa fa-plus"></i>&nbsp;
             {{ mf '_header-teachTab-linkText' '发布一个微课' }}
+          </a>
+        </li>
+        <li class="{{ isActivePath regex='doodle' }}">
+          <a href="http://maodou-doodle.meteor.com/">
+            <i class="fa fa-comment"></i>&nbsp;
+            {{ mf '_header-doodleTab-linkText' '吐槽墙' }}
           </a>
         </li>
       </ul>
