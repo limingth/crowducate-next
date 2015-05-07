@@ -27,6 +27,6 @@ CourseController = AppController.extend({
         //var course  = Courses.find(courseID).fetch()[0]; // select the zeroeth array item
 
         // Set the site title for SEO
-        //Meta.setTitle(course.title);
+        Meta.setTitle(Courses.findOne(courseID).title);
     }
 });
