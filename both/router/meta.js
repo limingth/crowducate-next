@@ -3,7 +3,7 @@ if(Meteor.isClient) {
     options: {
       //Meteor.settings[Meteor.settings.environment].public.meta.title,
       title: '毛豆网微课堂',
-      suffix: 'Crowducate'
+      suffix: '毛豆网微课堂'
     }
   });
 }
