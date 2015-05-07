@@ -4,7 +4,7 @@ Template.courseSidebarSection.helpers({
         var lessonIDs = this.lessonIDs;
 
         // Get lessons from database
-        var lessons = Lessons.find({_id: {$in: lessonIDs}});
+        var lessons = Lessons.find({_id: {$in: lessonIDs}}, {sort: {name: 1}});
 
         return lessons;
     },
