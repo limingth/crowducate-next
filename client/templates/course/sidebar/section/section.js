@@ -14,5 +14,12 @@ Template.courseSidebarSection.helpers({
 
         // return true if editing this course
         return (Session.get('editingCourseID') === courseID);
+    },
+    'showThisLesson': function() {
+      if(this._id == activeLessonID.get()) {
+        return true;
+      } else {
+        return false;
+      }
     }
 });

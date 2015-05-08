@@ -6,10 +6,14 @@
             <ul class="nav nav-pills nav-stacked">
                 {{# each lessons }} <!-- Loop through lessons -->
                 {{> sectionLesson }}
+                {{#if showThisLesson}}
+                  {{> lessonContent currentLesson=this}}
+                {{/if}}
                 {{/ each }}
             </ul>
             {{/ if }}
         </div>
+
         {{# if editingThisCourse }}
         <div class="panel-footer">
             {{> addLesson }}
