@@ -7,9 +7,7 @@
                 {{# each lessons }} <!-- Loop through lessons -->
                 {{> sectionLesson }}
                 {{#if showThisLesson}}
-                <li>
                   {{> lessonContent currentLesson=this}}
-                </li>
                 {{/if}}
                 {{/ each }}
             </ul>
