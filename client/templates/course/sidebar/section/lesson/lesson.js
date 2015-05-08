@@ -37,6 +37,12 @@ Template.sectionLesson.events({
 
 Template.sectionLesson.helpers({
   isCompleted: function() {
-    return !!CompletedLessons.findOne({lessonId: this._id}) ? "completed" : "";
+    if(!Meteor.userId()) return "";
+
+    var userCompletedlesson = CompletedLessons.findOne({
+      lessonId: this._id,
+      userId: Meteor.userId()
+    });
+    return userCompletedlesson ? "completed" : "";
   }
 });
