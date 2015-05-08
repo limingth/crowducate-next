@@ -1,17 +1,13 @@
 <template name="lessonContent">
     {{# with currentLesson }}
-    <div class="col-xs-12 col-sm-7 col-md-6">
-        {{> courseLessonTitle name=name }}
-
-        <div class="lesson-text {{editClass}}">
+        <div class="lesson-text">
             {{# unless editingLessonText }}
                 {{# if text }}
-                    {{{ text }}}
-                    {{ else }}
-                    <p>There does not appear to be any lesson text. Click to edit.</p>
+                  {{{ text }}}
+                {{ else }}
+                  <p>暂无内容</p>
                 {{/ if }}
             {{/ unless }}
         </div>
-    </div>
     {{/ with }}
 </template>
