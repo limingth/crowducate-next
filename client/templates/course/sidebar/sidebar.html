@@ -1,24 +1,22 @@
 <template name="courseSidebar">
-    <div class="course-navigation">
-        <div class="col-xs-12 col-md-6">
-            {{# if editingThisCourse }}
-            <div class="panel">
-                {{> addSection }}
-            </div>
-            {{/ if }}
+  <div class="course-navigation col-xs-12 col-md-6">
+      {{# if editingThisCourse }}
+      <div class="panel">
+          {{> addSection }}
+      </div>
+      {{/ if }}
 
-            {{# if sections }}
-            {{# each sections }}
-            {{> courseSidebarSection }}
-            {{/ each }}
-            {{ else }}
-            <p>
-                {{ mf
-                'courseSidebar-noSectionsDefined-helpText'
-                'No sections have been defined. Go into edit mode to add one or more sections.'
-                }}
-            </p>
-            {{/ if }}
-        </div>
-    </div>
+      {{# if sections }}
+      {{# each sections }}
+      {{> courseSidebarSection }}
+      {{/ each }}
+      {{ else }}
+      <p>
+          {{ mf
+          'courseSidebar-noSectionsDefined-helpText'
+          'No sections have been defined. Go into edit mode to add one or more sections.'
+          }}
+      </p>
+      {{/ if }}
+  </div>
 </template>
