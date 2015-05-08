@@ -1,13 +1,13 @@
 <template name="courseToolbarTabs">
-    <ul class="nav nav-pills toolbar-pages-list navbar-left">
+    <ul class="nav nav-tabs toolbar-pages-list">
         <li class="{{ isActiveRoute regex='^course$' }}">
             <a href="{{ pathFor 'course' }}">
-                {{ mf 'courseToolbarTabs-courseMaterialTabText' 'Course material' }}
+                {{ mf 'courseToolbarTabs-courseMaterialTabText' '课程内容' }}
             </a>
         </li>
         <li class="{{ isActiveRoute regex='^courseInfo$' }}">
             <a href="{{ pathFor 'courseInfo' }}">
-                {{ mf 'courseToolbarTabs-courseInfoTabText' 'Course info'}}
+                {{ mf 'courseToolbarTabs-courseInfoTabText' '课程介绍'}}
             </a>
         </li>
     </ul>
