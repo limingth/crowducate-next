@@ -13,31 +13,30 @@ Template.sectionLesson.events({
         // to the value of clicked lesson
         activeLessonID.set(this._id);
       }
-      } else {
-        // set active lesson ID reactive variable
-        // to the value of clicked lesson
-        activeLessonID.set(this._id);
-      }
-      },
-      'click .editable-submit': function (event, template) {
-        // Get the new name from the inline editor
-        var newName = template.find('input').value;
+    } else {
+      // set active lesson ID reactive variable
+      // to the value of clicked lesson
+      activeLessonID.set(this._id);
+    }
+  },
+  'click .editable-submit': function (event, template) {
+    // Get the new name from the inline editor
+    var newName = template.find('input').value;
 
-        // update the lesson in database
-        Lessons.update(this._id, {$set: {'name': newName}});
-        },
-        'click .lesson-mark-done': function(event, template) {
-          console.log(this);
-          var CompletedLessonId = CompletedLessons.insert({
-            lessonId: this._id,
-            userId: Meteor.userId(),
-            createdAt: new Date()
-            });
-          }
-          });
+    // update the lesson in database
+    Lessons.update(this._id, {$set: {'name': newName}});
+  },
+  'click .lesson-mark-done': function(event, template) {
+    var CompletedLessonId = CompletedLessons.insert({
+      lessonId: this._id,
+      userId: Meteor.userId(),
+      createdAt: new Date()
+    });
+  }
+});
 
-          Template.sectionLesson.helpers({
-            isCompleted: function() {
-              return !!CompletedLessons.findOne({lessonId: this._id}) ? "completed" : "";
-            }
-            });
+Template.sectionLesson.helpers({
+  isCompleted: function() {
+    return !!CompletedLessons.findOne({lessonId: this._id}) ? "completed" : "";
+  }
+});
