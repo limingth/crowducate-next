@@ -2,9 +2,11 @@
   <li>
     <a href="#" class="sidebar-lesson-link {{isCompleted}}">
       <span class="sidebar-lesson-title">{{ this.name }}</span>
-      <span class="lesson-mark-done">
-        <i class="fa fa-check-square"></i>
-      </span>
+      {{#if currentUser}}
+        <span class="lesson-mark-done">
+          <i class="fa fa-check-square"></i>
+        </span>
+      {{/if}}
     </a>
   </li>
 </template>
