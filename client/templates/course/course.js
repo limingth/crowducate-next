@@ -12,6 +12,6 @@ Template.course.helpers({
     }
   */
   admin: function (argument) {
-      return Meteor.userId() == "t8Xf8xSjmiHDKGxEF" || Meteor.userId() == "feKnQQv5w4b6hkisX" || Meteor.userId() == "5Fp9XzMhyDEjfnipt" || Meteor.userId() == "6ryZES3ZPJeeYs8YY" || Meteor.userId() == "xgoJBP5wo2drCtKBb";
+      return Meteor.userId() == "Sfkj3c3bT2RLiE2jc" || Meteor.userId() == "feKnQQv5w4b6hkisX" || Meteor.userId() == "5Fp9XzMhyDEjfnipt" || Meteor.userId() == "6ryZES3ZPJeeYs8YY" || Meteor.userId() == "xgoJBP5wo2drCtKBb";
   }
 });
