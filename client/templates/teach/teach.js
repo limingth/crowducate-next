@@ -43,6 +43,7 @@ Template.teach.events({
 });
 
 Template.teach.rendered = function() {
+    $('input').garlic();
     // Attach the summernote editor to the description field
     $('#aboutText').summernote({
         'height': 150,
