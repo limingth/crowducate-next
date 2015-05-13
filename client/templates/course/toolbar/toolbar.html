@@ -1,13 +1,13 @@
 <template name="courseToolbar">
   <div class="row course-toolbar">
-    <nav class="navbar navbar-default">
-      <!-- {{> courseToolbarTabs }} -->
+    <div class="btn-toolbar" role="toolbar" aria-label="course toolbar">
       {{# if editMode}}
         {{> togglePublish}}
+        {{> deleteCourse}}
         {{> doneEditingCourse }}
       {{else}}
         {{> editCourse }}
       {{/ if }}
-    </nav>
+    </div>
   </div>
 </template>
