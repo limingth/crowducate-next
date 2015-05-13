@@ -32,6 +32,11 @@ Template.sectionLesson.events({
       userId: Meteor.userId(),
       createdAt: new Date()
     });
+  },
+  'click #delete-lesson': function() {
+    if (window.confirm("删除后数据将无法恢复，确认删除?")) {
+      Lessons.remove(this._id);
+    }
   }
 });
 
@@ -44,5 +49,24 @@ Template.sectionLesson.helpers({
       userId: Meteor.userId()
     });
     return userCompletedlesson ? "completed" : "";
+  },
+  'editingThisCourse': function () {
+      // Get the course ID from parent template
+      /*var courseID = Template.parentData();*/
+      /*var courseID = controller.params._id;*/
+      // Get the current router object
+      var controller = Router.current();
+
+      // Get course ID from router object
+      var courseID = controller.params._id;
+
+      // Get the lesson ID from reactive var
+      var lessonID = activeLessonID.get();
+
+      console.log(lessonID);
+      /*console.log(activeLessonID);*/
+
+      // return true if editing this course
+      return (Session.get('editingCourseID') === courseID);
   }
 });

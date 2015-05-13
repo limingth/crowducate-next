@@ -1,6 +1,12 @@
 <template name="sectionLesson">
   <li>
+      {{# if editingThisCourse }}
+      <a href="#" id="delete-lesson">
+        <i class="fa fa-trash"></i>
+      </a>
+      {{/ if }}
     <a href="#" class="sidebar-lesson-link {{isCompleted}}">
+
       <span class="sidebar-lesson-title">{{ this.name }}</span>
       {{#if currentUser}}
         <span class="lesson-mark-done">
