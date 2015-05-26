@@ -9,6 +9,8 @@ Router.route('/teach');
 
 Router.route('/learn');
 
+Router.route('/search');
+
 Router.route('tag/:tag',  {
     name: 'taggedCourses'
 });

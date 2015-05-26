@@ -25,7 +25,7 @@ Template.lesson.helpers({
     'editingLessonText': function (template) {
         // return true if editing the lesson text
         // value is set on click event
-        return editingLessonText.get() && (Meteor.userId() == "znNB43xrYAWRXKtWe" || Meteor.userId() == "feKnQQv5w4b6hkisX" || Meteor.userId() == "5Fp9XzMhyDEjfnipt" || Meteor.userId() == "6ryZES3ZPJeeYs8YY" || Meteor.userId() == "xgoJBP5wo2drCtKBb");
+        return editingLessonText.get() && (Meteor.userId() == "Sfkj3c3bT2RLiE2jc" || Meteor.userId() == "znNB43xrYAWRXKtWe" || Meteor.userId() == "feKnQQv5w4b6hkisX" || Meteor.userId() == "5Fp9XzMhyDEjfnipt" || Meteor.userId() == "6ryZES3ZPJeeYs8YY" || Meteor.userId() == "xgoJBP5wo2drCtKBb");
     }
 });
 
@@ -37,7 +37,7 @@ Template.lesson.events({
     // in edit mode,
     // add rich text editor
     // to lesson text
-    if (editingLessonText.get() && (Meteor.userId() == "znNB43xrYAWRXKtWe" || Meteor.userId() == "feKnQQv5w4b6hkisX" || Meteor.userId() == "5Fp9XzMhyDEjfnipt" || Meteor.userId() == "6ryZES3ZPJeeYs8YY" || Meteor.userId() == "xgoJBP5wo2drCtKBb")) {
+    if (editingLessonText.get() && (Meteor.userId() == "Sfkj3c3bT2RLiE2jc" || Meteor.userId() == "znNB43xrYAWRXKtWe" || Meteor.userId() == "feKnQQv5w4b6hkisX" || Meteor.userId() == "5Fp9XzMhyDEjfnipt" || Meteor.userId() == "6ryZES3ZPJeeYs8YY" || Meteor.userId() == "xgoJBP5wo2drCtKBb")) {
       $('#rich-text-editor').summernote({
         'height': 300,
         'focus': true,
@@ -62,6 +62,10 @@ Template.lesson.events({
     saveTimer.set(function() {
       // Get the HTML from rich text editor
       var lessonText = $('#rich-text-editor').code();
+
+      var plainText = lessonText.replace(/<[^>]*>/g, '');
+      plainText = plainText.replace(/&nbsp;/g, ' ');
+      console.log(plainText);
 
       // update the lesson in database
       Lessons.update(lessonId, {$set: {'text': lessonText}});

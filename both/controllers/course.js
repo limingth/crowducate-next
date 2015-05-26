@@ -12,7 +12,7 @@ CourseController = AppController.extend({
             this.subscribe("completedLessons", Meteor.userId())
         ];
     },
-    fastRender: true,
+    //fastRender: true,
     data: function () {
         // Return the course
         return Courses.findOne();

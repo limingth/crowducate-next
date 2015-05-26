@@ -1,0 +1,11 @@
+
+<template name="search">
+    {{> esInput index="lessons" placeholder="Search..." }}
+
+    <ul>
+        {{#esEach index="lessons"}}
+            <li>lesson: {{name}}</li>
+            {{{text}}}
+        {{/esEach}}
+    </ul>
+</template>
