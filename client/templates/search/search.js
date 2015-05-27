@@ -1,5 +1,5 @@
 
-Meteor.subscribe('lessons');  
+//Meteor.subscribe('lessons');  
 
 Template.search.helpers({
   lessons: function () {

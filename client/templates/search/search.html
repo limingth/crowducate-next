@@ -4,8 +4,11 @@
 
     <ul>
         {{#esEach index="lessons"}}
-            <li>lesson: {{name}}</li>
+            <li><h1>{{name}}</h1></li>
             {{{text}}}
+            {{#each courseIDs}}
+              <a href="/course/{{this}}">See the whole course</a>
+            {{/each}}
         {{/esEach}}
     </ul>
 </template>
