@@ -42,6 +42,12 @@
             {{ mf '_header-doodleTab-linkText' '涂鸦墙' }}
           </a>
         </li>
+        <li class="{{ isActivePath regex='search' }}">
+          <a href="{{ pathFor 'search' }}">
+            <i class="fa fa-search"></i>&nbsp;
+            {{ mf '_header-searchTab-linkText' '搜索' }}
+          </a>
+        </li>
       </ul>
       <!-- {{> languageSelection}} -->
       {{#if currentUser}}
