@@ -1,8 +1,15 @@
 
+<!-- <form class="navbar-form navbar-left" role="search">
+            
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default"><font><font>提交</font></font></button>
+          </form> -->
+
 <template name="search">
    <div class="searchdiv">
-    <form class="searchInput">
-        <a class="fa fa-search"></a> {{> esInput index="lessons" placeholder="Search..." }} 
+    <form class="searchInput" role="search">
+        {{> esInput type="text" class="form-control" index="lessons" placeholder="Search..." }} 
    </form> 
 
     <ul class="search">
