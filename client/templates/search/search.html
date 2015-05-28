@@ -1,14 +1,20 @@
 
 <template name="search">
-    {{> esInput index="lessons" placeholder="Search..." }}
+   <div class="searchdiv">
+    <form class="searchInput">
+        <a class="fa fa-search"></a> {{> esInput index="lessons" placeholder="Search..." }} 
+   </form> 
 
-    <ul>
+    <ul class="caption search">
         {{#esEach index="lessons"}}
+            <ol class="">
             <li><h1>{{name}}</h1></li>
-            {{{text}}}
+            <br/>
+            <li>{{{text}}}</li>
             {{#each courseIDs}}
               <a href="/course/{{this}}">See the whole course</a>
             {{/each}}
+            </ol>
         {{/esEach}}
-    </ul>
+    </ul></div>
 </template>
