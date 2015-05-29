@@ -263,7 +263,7 @@ mfPkg.addNative(
   },
   "courseMeta-courseAuthorAttribution": {
     "key": "courseMeta-courseAuthorAttribution",
-    "text": "originally by",
+    "text": "originally by 2",
     "file": "./client/templates/course/meta/meta.html",
     "line": 4,
     "template": "courseMeta",

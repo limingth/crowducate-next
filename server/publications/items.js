@@ -13,3 +13,19 @@ Meteor.publishComposite("items", function() {
     // ]
   }
 });
+
+Meteor.publishComposite("records", function(userId) {
+  return {
+    find: function() {
+      return Records.find({uid: userId});
+    }
+    ,
+    children: [
+      {
+        find: function(item) {
+          return Courses.find(item.courseId);
+        }
+      }
+    ]
+  }
+});

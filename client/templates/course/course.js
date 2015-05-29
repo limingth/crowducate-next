@@ -5,6 +5,19 @@ Template.course.rendered = function () {
     $.fn.editableform.buttons =
         '<button type="submit" class="btn btn-success editable-submit btn-mini"><i class="fa fa-check"></i></button>' +
         '<button type="button" class="btn btn-danger editable-cancel"><i class="fa fa-times"></i></button>';
+
+  // Get the current router object
+  var controller = Router.current();
+
+  // Get course ID from router object
+  var courseId = controller.params._id;
+
+  console.log('courseID ' + courseId);
+
+  var uid = Meteor.userId();
+
+  Courses.update(courseId, {$inc: {viewCount: 1}});
+  Records.insert({uid: uid, courseId: courseId,  date:new Date()});
 };
 
 Template.course.helpers({

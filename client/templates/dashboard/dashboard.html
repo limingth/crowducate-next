@@ -1,14 +1,21 @@
 <template name="dashboard">
   <div class="template-dashboard">
     <div class="page-header">
-      <h1>Dashboard</h1>
+      <h1>我的学习记录 Dashboard</h1>
     </div>
 
+    <ul class="list-group">
+      {{#each records}}
+        <li class="list-group-item"> <span class="label label-default"> {{formatdatetime date}}</span> 学习了 {{courseName this.courseId}} </li>
+      {{/each}}
+    </ul>
+
+<!--
     <ul class="list-group">
       {{#each items}}
         <li class="list-group-item">{{ name }} <span class="label label-default">{{ rating }}</span></li>
       {{/each}}
     </ul>
-
+-->
   </div>
 </template>
