@@ -41,3 +41,46 @@ a.tag-label:visited {
 
 }
 
+.card .course-card {
+    border-radius: 6px;
+}
+
+.card .caption {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 6px;
+}
+
+@media only screen and (min-width: 1280px){
+    .card {
+        width: 19%;
+        margin: 0 0.5%;
+    }
+}
+
+@media only screen and (min-width : 980px) and (max-width: 1279px){
+    .card {
+        width: 24%;
+        margin: 0 0.5%;
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 979px){
+    .card {
+        width: 32%;
+        margin: 0 0.6%;
+    }
+}
+
+@media only screen and (max-width : 767px){
+    .card {
+        width: 48%;
+        margin: 0 1%;
+    }
+}
+
+@media all and (max-width: 640px) {
+    .card {
+        width: 96%;
+        margin: 0 2%;
+    }
+}
