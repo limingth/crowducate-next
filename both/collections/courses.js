@@ -17,4 +17,8 @@ Courses.helpers({
 Courses.before.insert(function (userId, document) {
     document.createdById = userId;
     document.dateCreated = new Date();
+    document.viewCount = 0;
+    document.voteCount = 0;
 });
+
+Records = new Mongo.Collection("records");

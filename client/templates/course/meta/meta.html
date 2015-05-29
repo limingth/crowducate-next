@@ -1,9 +1,10 @@
 <template name="courseMeta">
     <div class="well">
         <span class="course-author">
-            {{ mf 'courseMeta-courseAuthorAttribution' 'originally by' }}
-            <a href="#">{{ author }}</a>
+            <!-- {{ mf 'courseMeta-courseAuthorAttribution' 'originally by 5' }} -->
+            课程创建者 <a href="#">{{ author }}</a> , 该课程已经被浏览了{{viewCount}}次
         </span>
         <span class="course-date-created">{{ date }}</span>
+        <p></p>
     </div>
 </template>

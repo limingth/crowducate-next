@@ -20,6 +20,6 @@ TaggedCoursesController = AppController.extend({
         Session.set('tag', this.params.tag);
 
         // Set the site title for SEO
-        Meta.setTitle('Courses tagged "' + tag + '"');
+        Meta.setTitle('课程标签 "' + tag + '"');
     }
 });

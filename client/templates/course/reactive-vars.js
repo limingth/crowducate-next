@@ -5,4 +5,7 @@ Template.course.created = function () {
 
     // Set the empty active lesson ID variable
     activeLessonID = new ReactiveVar();
+
+    console.log('course created');
+    console.log(this);
 }

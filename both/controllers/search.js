@@ -4,9 +4,9 @@ SearchController = AppController.extend({
     },
     waitOn: function() {
         // Wait for the tags to be available
-        return [ 
-        	this.subscribe('lessons'),
-        	this.subscribe('courses')
+        return [
+          this.subscribe('lessons'),
+          this.subscribe('courses')  
         ];
     }
 });

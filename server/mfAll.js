@@ -880,7 +880,7 @@ mfPkg.syncAll({
     "courseMeta-courseAuthorAttribution": {
       "key": "courseMeta-courseAuthorAttribution",
       "lang": "en",
-      "text": "originally by",
+      "text": "originally by 3",
       "ctime": 1426597721408,
       "mtime": 1426597721408,
       "revisionId": "XvDe5w6t3Zs5Zc27p",
