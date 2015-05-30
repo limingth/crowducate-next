@@ -17,7 +17,7 @@
 <!--                <p>by <a href="#">{{ author }}</a></p>-->
                 <p>{{{ truncate about 77 }}}</p>
                 {{# with truncateKeywords 6 keywords }}
-                <p>
+                <p class="lead">
                     {{# each truncatedKeywords }}
                     <a class="tag-label" href="/tag/{{ this }}" title="Resources page for {{ this }}">
                         <span class="label label-info">{{ this }}</span>
