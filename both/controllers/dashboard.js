@@ -3,12 +3,13 @@ DashboardController = AppController.extend({
     return [
     this.subscribe('items'),
     this.subscribe('records', Meteor.userId()),
+    this.subscribe('myCourses', Meteor.userId()),
     ]
   },
   data: {
     items: Items.find({}),
     records: Records.find({}, {sort: {date: -1}}),
-    courses: Courses.find({})
+    mycourses: Courses.find({}, {sort: {dateCreated: -1}}),
   },
   onBeforeAction: function (pause) {
     AccountsTemplates.ensureSignedIn.call(this, pause);

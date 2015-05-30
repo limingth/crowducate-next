@@ -6,10 +6,15 @@
 
     <ul class="list-group">
       {{#each records}}
-        <li class="list-group-item"> <span class="label label-default"> {{formatdatetime date}}</span> 学习了 {{courseName this.courseId}} </li>
+        <li class="list-group-item"> <span class="label label-default"> {{formatdatetime date}}</span> 学习了 <a href="/course/{{this.courseId}}"> {{courseName this.courseId}} </a> </li>
       {{/each}}
     </ul>
 
+    <ul class="list-group">
+      {{#each mycourses}}
+        <li class="list-group-item"> <span class="label label-default"> {{formatdatetime dateCreated}}</span> 创建了 <a href="/course/{{_id}}"> {{title}} </a> </li>
+      {{/each}}
+    </ul>
 <!--
     <ul class="list-group">
       {{#each items}}
