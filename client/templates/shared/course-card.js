@@ -22,7 +22,7 @@ Template.courseCard.rendered = function() {
   var container = document.querySelector('.listcard');
   var msnry = new Masonry(container, {
     itemSelector: '.card',
-    isAnimated: true,
+    // isAnimated: true,
     // columnWidth: 200,
     animationOptions: {
       duration: 400

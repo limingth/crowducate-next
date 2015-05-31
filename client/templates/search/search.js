@@ -16,3 +16,15 @@ Template.search.helpers({
     return Courses.findOne(courseID).author;
   }
 });
+
+Template.courseCard.rendered = function() {
+  var container = document.querySelector('.container');
+  var msnry = new Masonry(container, {
+    itemSelector: '.col-xs-6',
+    isAnimated: true,
+     columnWidth: 200,
+    animationOptions: {
+      duration: 400
+    }
+  });
+};
