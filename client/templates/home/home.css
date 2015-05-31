@@ -19,8 +19,9 @@ a:hover {
   border: 1px solid #092800;
 }
 .label-info{
-  background-color: #04AC00;
-  box-shadow: 0 1px 3px #092800;
+  background-color: #DCFFD4;
+  color: #307B30;
+  font-weight: normal;
 }
 
 /*
