@@ -7,26 +7,37 @@
           </form> -->
 
 <template name="search">
-   <div class="searchdiv">
-    <form class="searchInput" role="search">
-        {{> esInput type="text" class="form-control" index="lessons" placeholder="Search..." }} 
-   </form> 
-
-    <ul class="search">
+   <div class="jumbotron">
+      <div class="row">
+        <form role="form-control container">
+          <div class="form-group col-xs-6 center-block inputcenter" >
+                {{> esInput type="text" class="form-control input-lg" index="lessons" placeholder="Search..." }}
+          </div>
+        </form>
+      </div>
+   </div>
+  <div class="container">
         {{#esEach index="lessons"}}
-            <ol class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
-            <div>
-            <li><h1>{{name}}</h1></li>
-            <li>{{{text}}}</li>
-            {{#each courseIDs}}
-
-              <a href="/course/{{this}}">See the whole course</a>
-              {{courseName this}}
-             by {{courseAuthor this}}
-      
-            {{/each}}
+            <div class="searchCard thumbnail col-md-6 col-sm-12">
+                <div class="well well-sm">
+                  <h3 class="text-center">{{name}}</h3>
+                 </div>
+                  {{#each courseIDs}}
+                       <a class="btn btn-primary" href="/course/{{this}}">See the whole course</a>
+                   {{/each}}
+                   
+                      <div class="well well-lg">
+                    <p>{{{text}}}</p>
+                      </div>
+                  
+                  {{#each courseIDs}}
+                      <h4><small>
+                       {{courseName this}}
+                       by {{courseAuthor this}}
+                      </small></h4>
+                  {{/each}}
+                   
             </div>
-            </ol>
         {{/esEach}}
-    </ul></div>
+    </div>
 </template>
