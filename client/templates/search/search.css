@@ -1,5 +1,7 @@
 
-.sreachCard .course-card {
+.sreachCard{
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 6px;
 }
 
@@ -11,7 +13,14 @@
 .inputcenter{
     float: none;
 }
-
+.searchCardRight{
+    right: 20px;
+    text-align: right;
+}
+.well-smx{
+    padding: 0 20px 0 20px;
+    margin-bottom: 0;
+}
 .well{
 background-color: #fff;
 border: none;

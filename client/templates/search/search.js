@@ -18,9 +18,9 @@ Template.search.helpers({
 });
 
 Template.courseCard.rendered = function() {
-  var container = document.querySelector('.searchList');
+  var container = document.querySelector('.container');
   var msnry = new Masonry(container, {
-    itemSelector: '.searchCard',
+    itemSelector: '.col-xs-6',
     isAnimated: true,
      columnWidth: 200,
     animationOptions: {

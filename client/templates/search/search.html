@@ -9,34 +9,34 @@
 <template name="search">
    <div class="jumbotron">
       <div class="row">
+      <h3 class="text-center">搜索毛豆网微课程</h3>
         <form role="form-control container">
-          <div class="form-group col-xs-6 center-block inputcenter" >
-                {{> esInput type="text" class="form-control input-lg" index="lessons" placeholder="Search..." }}
+          <div class="form-group col-xs-4 center-block inputcenter" >
+                {{> esInput type="text" class="form-control" index="lessons" placeholder="Search..." }}
           </div>
         </form>
       </div>
    </div>
   <div class="container">
         {{#esEach index="lessons"}}
-            <div class="searchCard thumbnail col-md-6 col-sm-12">
-                <div class="well well-sm">
-                  <h3 class="text-center">{{name}}</h3>
-                 </div>
-                  {{#each courseIDs}}
-                       <a class="btn btn-primary" href="/course/{{this}}">See the whole course</a>
-                   {{/each}}
-                   
-                      <div class="well well-lg">
+            <div class="searchCard col-md-6 col-sm-12">
+              <div class="panel panel-success">
+                <div class="panel-heading">
+                  <h4 class="text-center">
+                  {{name}}
+                  </h4>
+                 </div> 
+                      <div class="well well-lg panel-body">
                     <p>{{{text}}}</p>
                       </div>
-                  
                   {{#each courseIDs}}
-                      <h4><small>
-                       {{courseName this}}
-                       by {{courseAuthor this}}
-                      </small></h4>
-                  {{/each}}
-                   
+                  <div class="well well-smx">
+                       <p class="searchCardRight"><a class="btn btn-primary" href="/course/{{this}}">{{courseName this}}</a>
+                       </p>
+                      <h4 class="searchCardRight"><small>原创作者 {{courseAuthor this}}</small></h4>
+                  </div>
+                  {{/each}} 
+              </div>
             </div>
         {{/esEach}}
     </div>
