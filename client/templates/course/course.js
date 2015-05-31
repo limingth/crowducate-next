@@ -12,12 +12,10 @@ Template.course.rendered = function () {
   // Get course ID from router object
   var courseId = controller.params._id;
 
-  console.log('courseID ' + courseId);
-
-  var uid = Meteor.userId();
+  var userId = Meteor.userId();
 
   Courses.update(courseId, {$inc: {viewCount: 1}});
-  Records.insert({uid: uid, courseId: courseId,  date:new Date()});
+  Records.insert({userId: userId, courseId: courseId,  date:new Date()});
 };
 
 Template.course.helpers({

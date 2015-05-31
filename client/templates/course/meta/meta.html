@@ -4,7 +4,13 @@
             <!-- {{ mf 'courseMeta-courseAuthorAttribution' 'originally by 5' }} -->
             课程创建者 <a href="#">{{ author }}</a>，该课程已经被浏览了{{viewCount}}次。
         </span>
-        <span class="course-date-created">课程创建于 {{formatdatetime dateCreated}}，by {{createdById}}</span>
+        <span class="course-date-created">课程创建于 {{formatdatetime dateCreated}}，{{GetUserName}}</span>
         <p></p>
+        {{#each records}}
+          <a href="#">
+            {{GetUserName}} 
+          </a> 
+          在 {{formatdatetime date}} 查看了该课程 <br>
+        {{/each}}
     </div>
 </template>
