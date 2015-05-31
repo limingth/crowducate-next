@@ -11,11 +11,17 @@ Courses.helpers({
 
         return image;
     },
+    'GetUser': function () {
+        var user = Meteor.users.findOne({_id: this.createdById});
+        return user;
+    },
     'GetUserName': function () {
+        console.log('in course helper ', this);
         var user = Meteor.users.findOne({_id: this.createdById});
         console.log(user);
         //console.log(user._id);  can not be used! Why?
         //console.log(user.emails[0]);
+
         return user.emails[0].address;
     }
 });
@@ -31,8 +37,12 @@ Courses.before.insert(function (userId, document) {
 Records = new Mongo.Collection("records");
 
 Records.helpers({
+    'GetUser': function () {
+        var user = Meteor.users.findOne({_id: this.userId});
+        return user;
+    },
     GetUserName: function () {
-        console.log(Meteor.users);
+        //console.log(Meteor.users);
         var user = Meteor.users.findOne({_id: this.userId});
         console.log(user);
         //console.log(user._id);  can not be used! Why?
