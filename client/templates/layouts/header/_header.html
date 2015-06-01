@@ -26,26 +26,27 @@
         </li>
         <li class="{{ isActivePath regex='learn' }}">
           <a href="{{ pathFor 'learn' }}">
-            <i class="fa fa-book"></i>&nbsp;
-            {{ mf '_header-learnTab-linkText' '开始学习' }}
+            <i class="fa fa-book"></i>&nbsp;开始学习
+           <!--  {{ mf '_header-learnTab-linkText' '开始学习' }} -->
           </a>
         </li>
         <li class="{{ isActivePath regex='teach' }}">
           <a href="{{ pathFor 'teach' }}">
-            <i class="fa fa-plus"></i>&nbsp;
-            {{ mf '_header-teachTab-linkText' '发布一个微课' }}
+            <i class="fa fa-plus"></i>&nbsp;发布一个微课
+            <!-- {{ mf '_header-teachTab-linkText' '发布一个微课' }} -->
           </a>
         </li>
+        
         <li class="{{ isActivePath regex='doodle' }}">
           <a href="http://maodou-doodle.meteor.com/">
-            <i class="fa fa-comment"></i>&nbsp;
-            {{ mf '_header-doodleTab-linkText' '涂鸦墙' }}
+            <i class="fa fa-comment"></i>&nbsp;涂鸦墙
+            <!-- {{ mf '_header-doodleTab-linkText' '涂鸦墙' }} -->
           </a>
         </li>
         <li class="{{ isActivePath regex='search' }}">
           <a href="{{ pathFor 'search' }}">
-            <i class="fa fa-search"></i>&nbsp;
-            {{ mf '_header-searchTab-linkText' '搜索' }}
+            <i class="fa fa-search"></i>&nbsp;搜索
+            <!-- {{ mf '_header-searchTab-linkText' '搜索' }} -->
           </a>
         </li>
       </ul>
@@ -58,12 +59,12 @@
           </a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <a href="/dashboard"><i class="fa fa-book"></i>&nbsp;学习记录
+              <a href="/dashboard"><i class="fa fa-book"></i>&nbsp;我的主页
               </a>
             </li>
             <li>
-              <a href="#" data-action="logout"><i class="fa fa-lock"></i>&nbsp;
-                {{ mf '_header-dropdownMenu-signOutText' '退出'}}
+              <a href="#" data-action="logout"><i class="fa fa-lock"></i>&nbsp;退出
+                <!-- {{ mf '_header-dropdownMenu-signOutText' '退出'}} -->
               </a>
             </li>
           </ul>
@@ -71,11 +72,11 @@
       </ul>
       {{else}}
       <div class="navbar-right">
-        <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">
-          {{ mf '_header-navbar-signInText' '登录' }}
+        <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">&nbsp;登录
+          <!-- {{ mf '_header-navbar-signInText' '登录' }} -->
         </a>
-        <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">
-          {{ mf '_header-navbar-registerText' '注册' }}
+        <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">&nbsp;注册
+          <!-- {{ mf '_header-navbar-registerText' '注册' }} -->
         </a>
       </div>
       {{/if}}

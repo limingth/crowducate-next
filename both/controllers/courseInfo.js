@@ -3,10 +3,11 @@ CourseInfoController = AppController.extend({
         // Wait for the course to be available
         return [
             this.subscribe('singleCourse', this.params._id),
-            this.subscribe('courseCoverImage', this.params._id)
+            this.subscribe('courseCoverImage', this.params._id),
+            // wait for courseRecords
+            this.subscribe("courseRecords", this.params._id)
         ];
     },
-    fastRender: true,
     data: function () {
         // Return the course
         return Courses.findOne();

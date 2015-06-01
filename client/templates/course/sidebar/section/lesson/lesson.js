@@ -63,8 +63,8 @@ Template.sectionLesson.helpers({
       // Get the lesson ID from reactive var
       var lessonID = activeLessonID.get();
 
-      console.log(lessonID);
-      /*console.log(activeLessonID);*/
+      console.log('lessonID ' + lessonID);
+      //console.log('activeLessonID ' + activeLessonID);
 
       // return true if editing this course
       return (Session.get('editingCourseID') === courseID);

@@ -7,9 +7,9 @@ Template.search.helpers({
   },
   courseName: function (courseID) {
     // body...
-    console.log('courseID is '+ courseID);
-    console.log(Courses.findOne(courseID));
-    return Courses.findOne(courseID).title;
+    // console.log('courseID is '+ courseID);
+    // console.log(Courses.findOne(courseID));
+    return Courses.findOne(courseID)? Courses.findOne(courseID).title : "";
   },
   courseAuthor: function (courseID) {
     // body...

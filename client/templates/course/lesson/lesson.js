@@ -65,7 +65,7 @@ Template.lesson.events({
 
       var plainText = lessonText.replace(/<[^>]*>/g, '');
       plainText = plainText.replace(/&nbsp;/g, ' ');
-      console.log(plainText);
+      console.log('plainText will be ' + plainText);
 
       // update the lesson in database
       Lessons.update(lessonId, {$set: {'text': lessonText}});

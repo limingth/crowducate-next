@@ -17,7 +17,7 @@ Meteor.publishComposite("items", function() {
 Meteor.publishComposite("records", function(userId) {
   return {
     find: function() {
-      return Records.find({uid: userId});
+      return Records.find({userId: userId});
     }
     ,
     children: [
